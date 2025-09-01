@@ -9,7 +9,7 @@ body {
 
 /* Hero (fixed) */
 .hero {
-  background: url('https://images.unsplash.com/photo-1591012911207-cc4ecf7a1e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  background: url('cobysteffanalytics.png.png') no-repeat center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -186,3 +186,4 @@ footer {
   padding: 1.5rem;
   margin-top: 2rem;
 }
+
