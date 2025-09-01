@@ -22,7 +22,7 @@
   <nav class="navbar">
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#subscribe">Subscribe</a>
+    <a href="#contact-form">Client Form</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -66,13 +66,21 @@
     </div>
   </section>
 
-  <!-- Subscribe Section -->
-  <section id="subscribe" class="section">
-    <h2>Subscribe for Updates</h2>
-    <p>Join my mailing list to receive free insights, dashboards, and analytics tips straight to your inbox.</p>
-    <form action="https://formspree.io/f/mvgpzpwk" method="POST" class="subscribe-form">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit" class="btn">Subscribe</button>
+  <!-- Client Contact Form -->
+  <section id="contact-form" class="section">
+    <h2>Client Contact Form</h2>
+    <p>Please fill out the form below and I will get back to you as soon as possible.</p>
+    <form action="https://formspree.io/f/mvgpzpwk" method="POST" class="client-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="_replyto" placeholder="Your email address" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
@@ -82,7 +90,7 @@
     <p>Let’s turn your data into business impact across Kenya & Africa.</p>
     <p><strong>Call/WhatsApp: +254701490155</strong></p>
     <p><strong>Email: workrelated043@gmail.com</strong></p>
-    <a href="#contact" class="btn">Contact Me</a>
+    <a href="#contact-form" class="btn">Send a Message</a>
   </section>
 
   <!-- Contact -->
