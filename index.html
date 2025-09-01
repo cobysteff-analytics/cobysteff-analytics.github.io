@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Fixed Header with Poster Background -->
+  <!-- Fixed Header -->
   <header class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
@@ -22,8 +22,7 @@
   <nav class="navbar">
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#faq">FAQ</a>
+    <a href="#subscribe">Subscribe</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -31,7 +30,7 @@
   <section id="about" class="section">
     <h2>About Me</h2>
     <div class="about-container">
-      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1200&q=80" alt="Nairobi city with data overlay">
+      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Nairobi city with data overlay">
       <p>
         Cobysteff Analytics is based in Kenya, delivering high-quality data solutions for businesses and individuals.
         I transform raw data into powerful insights, whether through data cleaning, visualization, or reporting dashboards.
@@ -45,58 +44,36 @@
     <h2>Services</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091215367-59ab6b0c1ecf?auto=format&fit=crop&w=1200&q=80" alt="Data cleaning process">
+        <img src="https://images.unsplash.com/photo-1581091215367-59ab6b0c1ecf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Data cleaning process">
         <h3>Data Cleaning</h3>
         <p>Reliable, structured datasets that fuel decision-making.</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1649972904348-9a62e06a7f8c?auto=format&fit=crop&w=1200&q=80" alt="Interactive dashboard example">
+        <img src="https://images.unsplash.com/photo-1649972904348-9a62e06a7f8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Interactive dashboard example">
         <h3>Dashboards</h3>
         <p>Beautiful dashboards that help you monitor KPIs with ease.</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1551836022-4c4f6b02f3b4?auto=format&fit=crop&w=1200&q=80" alt="Analytics graphs">
+        <img src="https://images.unsplash.com/photo-1551836022-4c4f6b02f3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Analytics graphs">
         <h3>Data Analysis</h3>
         <p>Uncover hidden patterns and insights in your data.</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1635864157861-3f84e7f0a5af?auto=format&fit=crop&w=1200&q=80" alt="Kenyan business analytics meeting">
+        <img src="https://images.unsplash.com/photo-1635864157861-3f84e7f0a5af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Kenyan business analytics meeting">
         <h3>Business Insights</h3>
         <p>Evidence-based strategies tailored for African markets.</p>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="section">
-    <h2>What Clients Say</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <p>“Cobysteff transformed our messy spreadsheets into actionable insights. Highly recommend for SMEs in Kenya.”</p>
-        <h4>- Wanjiku, Nairobi</h4>
-      </div>
-      <div class="testimonial">
-        <p>“The dashboards were clear, simple, and made management meetings so much easier.”</p>
-        <h4>- Kamau, Mombasa</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section bg-light">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>❓ What industries do you work with?</h3>
-      <p>I’ve worked with clients across finance, retail, NGOs, and tech startups in Kenya and Africa.</p>
-    </div>
-    <div class="faq-item">
-      <h3>❓ Do you provide training?</h3>
-      <p>Yes, I offer basic analytics and dashboard training tailored to business teams.</p>
-    </div>
-    <div class="faq-item">
-      <h3>❓ How much do your services cost?</h3>
-      <p>Pricing depends on project scope, but I always offer affordable rates for startups and SMEs.</p>
-    </div>
+  <!-- Subscribe Section -->
+  <section id="subscribe" class="section">
+    <h2>Subscribe for Updates</h2>
+    <p>Join my mailing list to receive free insights, dashboards, and analytics tips straight to your inbox.</p>
+    <form action="https://formspree.io/f/mvgpzpwk" method="POST" class="subscribe-form">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
   </section>
 
   <!-- Call-to-Action Banner -->
@@ -104,18 +81,8 @@
     <h2>📞 Get in Touch</h2>
     <p>Let’s turn your data into business impact across Kenya & Africa.</p>
     <p><strong>Call/WhatsApp: +254701490155</strong></p>
-    <p><strong>Email: cobysteffanalytics@gmail.com</strong></p>
+    <p><strong>Email: workrelated043@gmail.com</strong></p>
     <a href="#contact" class="btn">Contact Me</a>
-  </section>
-
-  <!-- Newsletter Signup -->
-  <section class="newsletter section">
-    <h2>Stay Updated</h2>
-    <p>Subscribe for insights, tips, and case studies on data analytics in Kenya.</p>
-    <form>
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
   </section>
 
   <!-- Contact -->
@@ -128,7 +95,7 @@
       </div>
       <div class="contact-card">
         <h3>Email</h3>
-        <p>cobysteffanalytics@gmail.com</p>
+        <p>workrelated043@gmail.com</p>
       </div>
       <div class="contact-card">
         <h3>GitHub</h3>
@@ -141,17 +108,5 @@
   <footer>
     <p>&copy; 2025 Cobysteff Analytics | Nairobi, Kenya | Built with ❤️</p>
   </footer>
-
-  <!-- Smooth Scroll Script -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
-        });
-      });
-    });
-  </script>
 </body>
 </html>
