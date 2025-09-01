@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +8,14 @@
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   line-height: 1.6;
+  background: #f9fafc;
   color: #222;
-  background: #f8f9fa;
 }
 
 /* Header */
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   background: rgba(0, 51, 102, 0.95);
   color: #fff;
@@ -28,8 +27,8 @@ body {
 }
 
 .header .logo {
-  font-size: 1.4rem;
   font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .header nav ul {
@@ -52,22 +51,21 @@ body {
 .hero {
   background: url('poster.jpg') no-repeat center/cover;
   height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  position: relative;
-  margin-top: 60px; /* space for fixed header */
+  margin-top: 60px; /* offset for header */
 }
 
 .hero .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 50, 0.65);
+  background: rgba(0,0,40,0.6);
 }
 
 .hero-text {
   position: relative;
-  z-index: 1;
   color: #fff;
   max-width: 600px;
 }
@@ -92,27 +90,21 @@ section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: #003366;
+  text-align: left;
+}
+
+section p {
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 /* About */
-.about-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.about-container img {
-  max-width: 90%;
+#about img {
+  width: 100%;
+  max-width: 900px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.about-container p {
-  font-size: 1.1rem;
-  color: #333;
-  text-align: left;
-  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 1rem;
 }
 
 /* Services */
@@ -144,7 +136,6 @@ section h2 {
 
 .card p {
   margin: 0 1rem 1rem;
-  font-size: 0.95rem;
   color: #444;
 }
 
@@ -154,7 +145,7 @@ section h2 {
 
 /* Contact */
 #contact p {
-  margin: 0.5rem 0;
+  margin-bottom: 0.8rem;
 }
 
 /* Footer */
@@ -162,6 +153,5 @@ footer {
   background: #003366;
   color: #fff;
   text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
+  padding: 1.2rem;
 }
