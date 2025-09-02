@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ h1, h2, h3 {
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 60px 0;   /* ⬅ removed left/right padding */
   text-align: center;
   width: 100%;
 }
@@ -50,7 +50,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px;   /* ⬅ removed side spacing */
   z-index: 2;
 }
 .hero-nav .logo {
@@ -61,7 +61,7 @@ h1, h2, h3 {
 .hero-nav .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 .nav-links a {
   color: #fff;
@@ -100,21 +100,22 @@ h1, h2, h3 {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 0;          /* ⬅ no extra spacing */
   align-items: center;
   width: 100%;
 }
 .about-text {
   text-align: left;
+  padding: 20px;   /* keep text readable */
 }
 .about-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 0;          /* ⬅ no white gaps */
 }
 .about-images img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0; /* flush edges */
   object-fit: cover;
 }
 
@@ -122,13 +123,13 @@ h1, h2, h3 {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
+  gap: 0;          /* ⬅ removed spacing */
   width: 100%;
 }
 .card {
   background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 40px 20px;
+  border-radius: 0;
 }
 .dark .card { background: #004080; color: #fff; }
 
@@ -136,13 +137,13 @@ h1, h2, h3 {
 .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 0;
   align-items: center;
   width: 100%;
 }
 .portfolio-grid img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 /* Footer */
