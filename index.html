@@ -5,150 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cobysteff Analytics</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    /* Contact Form Styles */
-    .contact-form {
-      max-width: 600px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .contact-form h3 {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #003366;
-    }
-
-    .contact-form label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1.2rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    .contact-form button {
-      display: block;
-      width: 100%;
-      padding: 1rem;
-      background: #003366;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .contact-form button:hover {
-      background: #00509e;
-    }
-
-    /* Card Images Fix */
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
-  </style>
 </head>
 <body>
-  <!-- Fixed Header -->
-  <header class="hero">
+  <!-- Hero Section -->
+  <header class="hero" style="background-image: url('images/cobysteff.png');">
     <div class="overlay"></div>
-    <div class="hero-content">
+    <div class="hero-text">
       <h1>Cobysteff Analytics</h1>
-      <p>Turning Data Into Decisions in Kenya & Beyond</p>
-      <a href="#contact" class="btn">Work With Me</a>
+      <p>Turning Data Into Decisions</p>
+      <a href="#contact" class="btn">Get in Touch</a>
     </div>
   </header>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="https://source.unsplash.com/1200x600/?nairobi,city,data" alt="Nairobi city with data overlay">
-      <p>
-        Cobysteff Analytics is based in Kenya, delivering high-quality data solutions for businesses and individuals.
-        I transform raw data into powerful insights, whether through data cleaning, visualization, or reporting dashboards.
-        My mission is to simplify analytics and make it accessible to everyone, from startups in Nairobi to enterprises across Africa.
-      </p>
-    </div>
+  <section id="about" class="section light">
+    <h2>About Us</h2>
+    <p>
+      At Cobysteff Analytics, we help businesses make sense of their data and turn it into useful insights. 
+      We also offer creative graphic design services to give your brand a strong visual identity. 
+      Our goal is to combine smart analytics with eye-catching design to help businesses in Kenya and beyond grow.
+    </p>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="section bg-dark">
-    <h2>Services</h2>
-    <div class="cards">
+  <!-- Services Section -->
+  <section id="services" class="section dark">
+    <h2>Our Services</h2>
+    <div class="services-grid">
       <div class="card">
-        <img src="https://source.unsplash.com/600x400/?data,cleaning" alt="Data cleaning process">
-        <h3>Data Cleaning</h3>
-        <p>Reliable, structured datasets that fuel decision-making.</p>
+        <h3>Data Analytics</h3>
+        <p>
+          From dashboards and reporting to advanced insights, we provide analytics solutions tailored to your business needs.
+        </p>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/600x400/?dashboard,analytics" alt="Interactive dashboard example">
-        <h3>Dashboards</h3>
-        <p>Beautiful dashboards that help you monitor KPIs with ease.</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?graphs,data" alt="Analytics graphs">
-        <h3>Data Analysis</h3>
-        <p>Uncover hidden patterns and insights in your data.</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/600x400/?business,meeting,kenya" alt="Kenyan business analytics meeting">
-        <h3>Business Insights</h3>
-        <p>Evidence-based strategies tailored for African markets.</p>
+        <h3>Graphic Design</h3>
+        <p>
+          Branding, marketing materials, and digital designs that make your business stand out.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <div class="contact-form">
-      <h3>Send a Message</h3>
-      <form action="https://formspree.io/f/mvgbqwya" method="POST">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="place">Your Contact Place / Company</label>
-        <input type="text" id="place" name="place" placeholder="e.g. Nairobi, Safaricom Ltd" required>
-
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section light">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <img src="images/cobysteffanalytics.png" alt="Portfolio Example" />
+      <div class="portfolio-text">
+        <h3>Data Visualization for Businesses</h3>
+        <p>
+          Showcasing how we transform raw data into clear visuals and reports that guide smarter business decisions.
+        </p>
+      </div>
     </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section dark">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you!</p>
+    <p><strong>Phone:</strong> +254701490155</p>
+    <p><strong>Email:</strong> cobysteffanalytics@gmail.com</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Cobysteff Analytics | Nairobi, Kenya | Built with ❤️</p>
+    <p>&copy; 2025 Cobysteff Analytics. All rights reserved.</p>
   </footer>
 </body>
 </html>
