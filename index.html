@@ -7,11 +7,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <header id="home" class="hero" style="background-image: url('cobysteffanaalytics.png.png');">
+  <!-- Hero Section with Navbar -->
+  <header id="home" class="hero" style="background-image: url('cobysteff.png');">
     <div class="overlay"></div>
-    
-    <!-- Navbar -->
     <nav class="hero-nav">
       <div class="logo">Cobysteff Analytics</div>
       <span class="menu-toggle" onclick="toggleMenu()">☰</span>
@@ -23,8 +21,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
-    <!-- Hero Content -->
     <div class="hero-text">
       <h1>Cobysteff Analytics</h1>
       <p>Turning Data Into Decisions</p>
@@ -32,43 +28,51 @@
     </div>
   </header>
 
-  <!-- About -->
+  <!-- About Section with Kenyan Insights and Sample Images -->
   <section id="about" class="section light">
     <h2>About Us</h2>
-    <p>
-      At Cobysteff Analytics, we help businesses make sense of their data and turn it into useful insights. 
-      We also offer creative graphic design services to give your brand a strong visual identity.
-    </p>
+    <div class="about-grid">
+      <div class="about-text">
+        <p><strong>Cobysteff Analytics</strong> empowers Kenyan businesses to turn data into meaningful stories and decisive action. From startups to established enterprises, we help you grow with clarity and confidence.</p>
+        <p>Our services blend solid analytics with creativity. Whether it's market behavior, financial trends, or consumer insight, we design visuals and branding elements that resonate with Kenya's unique business landscape.</p>
+      </div>
+      <div class="about-images">
+        <img src="kenya-insight1.png" alt="Kenya data insight infographic" />
+        <img src="kenya-insight2.png" alt="Kenyan market trends visual" />
+        <img src="kenya-insight3.png" alt="Kenya stock growth graphic" />
+        <img src="kenya-insight4.png" alt="Modern analytics dashboard" />
+      </div>
+    </div>
   </section>
 
-  <!-- Services -->
+  <!-- Services Section -->
   <section id="services" class="section dark">
     <h2>Our Services</h2>
     <div class="services-grid">
       <div class="card">
         <h3>Data Analytics</h3>
-        <p>Dashboards, reports, and insights tailored to your business needs.</p>
+        <p>Dashboards, reports, and insights tailored for your business needs.</p>
       </div>
       <div class="card">
         <h3>Graphic Design</h3>
-        <p>Branding and visuals that make your business stand out.</p>
+        <p>Branding and visual content that make your business stand out.</p>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
+  <!-- Portfolio Section -->
   <section id="portfolio" class="section light">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
-      <img src="cobysteff.png" alt="Portfolio Example" />
+      <img src="cobysteffanalytics.png" alt="Portfolio Example" />
       <div class="portfolio-text">
         <h3>Data Visualization</h3>
-        <p>We transform raw data into clear visuals that guide smart decisions.</p>
+        <p>Transforming raw data into clear visuals that guide smarter decisions.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="section dark">
     <h2>Contact Us</h2>
     <p><strong>Phone:</strong> +254701490155</p>
@@ -80,7 +84,7 @@
     <p>&copy; 2025 Cobysteff Analytics. All rights reserved.</p>
   </footer>
 
-  <!-- Script -->
+  <!-- Mobile Menu Toggle Script -->
   <script>
     function toggleMenu() {
       document.querySelector(".nav-links").classList.toggle("show");
@@ -88,5 +92,3 @@
   </script>
 </body>
 </html>
-
-
