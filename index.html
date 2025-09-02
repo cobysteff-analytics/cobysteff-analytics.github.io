@@ -6,12 +6,11 @@
   <title>Cobysteff Analytics</title>
 
   <style>
-    /* Reset + box sizing */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html,body { height: 100%; }
-    body { font-family: Arial, Helvetica, sans-serif; color:#222; -webkit-font-smoothing:antialiased; }
+    body { font-family: Arial, Helvetica, sans-serif; color:#222; }
 
-    /* NAVBAR: fixed at top, single-row even on mobile (scroll horizontally if needed) */
+    /* NAVBAR */
     .navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -19,37 +18,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 12px;               /* small internal gap only */
+      padding: 0 12px;
       background: rgba(0,0,0,0.45);
       backdrop-filter: blur(3px);
       z-index: 1000;
     }
-    .logo { color: #fff; font-weight:700; font-size: 1.05rem; padding-left:8px; }
+    .logo { color: #fff; font-weight:700; font-size: 1.05rem; }
     .nav-wrap {
       display: flex;
-      align-items: center;
       gap: 12px;
-      overflow-x: auto;              /* keep as single row by allowing horizontal scrolling */
-      -webkit-overflow-scrolling: touch;
-      white-space: nowrap;           /* prevent wrapping */
-      padding-bottom: 4px;
+      overflow-x: auto;
+      white-space: nowrap;
     }
-    /* hide scrollbar in webkit browsers (optional) */
-    .nav-wrap::-webkit-scrollbar { height: 6px; }
-    .nav-wrap::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 4px; }
-
     .nav-link {
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
+      color: #fff; text-decoration: none;
+      padding: 10px 14px; border-radius: 6px;
       font-weight:600;
-      padding: 10px 14px;
-      border-radius: 6px;
-      transition: background .15s, color .15s;
     }
     .nav-link:hover { background: rgba(255,255,255,0.06); color:#ffb347; }
 
-    /* HERO: full viewport, background image covers, content centered */
+    /* HERO */
     header.hero {
       height: 100vh;
       width: 100%;
@@ -57,7 +45,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      background-image: url("cobysteff.png"); /* image file must be in same folder */
+      background-image: url("cobysteff.png");
       background-size: cover;
       background-position: center;
     }
@@ -66,49 +54,38 @@
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.45);
-      z-index: 0;
     }
-
     .hero-inner {
       position: relative;
       z-index: 2;
       text-align: center;
       color: #fff;
       padding: 18px;
-      max-width: 1200px; /* controls text wrap */
+      max-width: 900px;
       width: 100%;
-      margin: 0;
     }
-    .hero-title { font-size: clamp(28px, 6vw, 56px); font-weight:800; letter-spacing: -0.02em; margin-bottom: 10px; }
-    .hero-sub { font-size: clamp(14px, 2.4vw, 20px); margin-bottom: 18px; color: #f0f0f0; }
+    .hero-title { font-size: clamp(28px, 6vw, 56px); font-weight:800; }
+    .hero-sub { font-size: clamp(14px, 2.4vw, 20px); margin: 10px 0; }
     .cta {
       display:inline-block;
-      background:#ff9900;
-      color:#fff;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration:none;
-      font-weight:700;
+      background:#ff9900; color:#fff;
+      padding: 12px 20px; border-radius: 8px;
+      text-decoration:none; font-weight:700;
     }
     .cta:hover { background:#e07a00; }
 
-    /* Sections: edge-to-edge, no left/right gaps */
-    .section {
-      width: 100%;
-      padding: 40px 0; /* vertical spacing only */
-    }
-    .section h2 { text-align: center; margin-bottom: 18px; font-size: 1.6rem; }
+    /* SECTIONS */
+    .section { width: 100%; padding: 60px 0; }
+    .section h2 { text-align: center; margin-bottom: 28px; font-size: 1.8rem; }
 
-    /* ABOUT: two-column full-width grid, images and text touch edges */
+    /* ABOUT US */
     .about-grid {
-      width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
-      align-items: stretch;
     }
     .about-text {
-      padding: 28px;            /* text gets padding so it's readable */
+      padding: 40px;
       background: #f9f9f9;
       display:flex;
       flex-direction:column;
@@ -116,74 +93,64 @@
     }
     .about-images {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
+      grid-template-areas: 
+        "big small1"
+        "big small2";
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 4px;
     }
     .about-images img {
-      width: 100%;
-      height: calc(50vh - 40px); /* tall thumbnails that touch edges */
-      object-fit: cover;
-      display:block;
+      width: 100%; height: 100%;
+      object-fit: cover; display:block;
     }
+    .about-images img.big { grid-area: big; }
+    .about-images img.small1 { grid-area: small1; }
+    .about-images img.small2 { grid-area: small2; }
 
-    /* SERVICES: full-width cards with no side gaps */
+    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap: 0;
-      width: 100%;
     }
     .card {
       padding: 40px 28px;
-      text-align: left;
       background: #fff;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      text-align: center;
+      border: 1px solid rgba(0,0,0,0.06);
     }
-    .dark .card { background:#004080; color:#fff; border-color: rgba(255,255,255,0.03); }
+    .dark { background:#004080; color:#fff; }
 
-    /* PORTFOLIO: two-column, images touch edges */
+    /* PORTFOLIO */
     .portfolio-grid {
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:0;
-      width:100%;
       align-items:center;
     }
     .portfolio-grid img {
-      width:100%;
-      height: 50vh;
+      width:100%; height:100%;
+      max-height: 400px;
       object-fit: cover;
-      display:block;
     }
-    .portfolio-text { padding: 28px; background:#f9f9f9; }
+    .portfolio-text { padding: 40px; background:#f9f9f9; }
 
-    /* CONTACT/FOOTER */
+    /* CONTACT */
     .contact { padding: 40px 20px; text-align:center; background:#003366; color:#fff; }
     footer { background:#111; color:#fff; text-align:center; padding:16px; }
 
-    /* Responsive - collapse columns to single column on small screens,
-       but nav remains one-row (horizontal scrolling allowed) */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .about-grid { grid-template-columns: 1fr; }
-      .about-images { grid-template-columns: 1fr 1fr; }
-      .about-images img { height: 35vh; }
+      .about-images { grid-template-areas: "big" "small1" "small2"; grid-template-columns: 1fr; }
       .portfolio-grid { grid-template-columns: 1fr; }
-      .portfolio-grid img { height: 40vh; }
-      .card { padding: 28px; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-title { font-size: 28px; }
-      .hero-sub { font-size: 14px; }
-      .navbar { height:56px; }
     }
   </style>
 </head>
 <body>
   <!-- NAV -->
-  <header class="navbar" role="banner" aria-label="Main navigation">
+  <header class="navbar">
     <div class="logo">Cobysteff Analytics</div>
-    <nav class="nav-wrap" role="navigation" aria-label="Primary">
+    <nav class="nav-wrap">
       <a class="nav-link" href="#home">Home</a>
       <a class="nav-link" href="#about">About</a>
       <a class="nav-link" href="#services">Services</a>
@@ -194,36 +161,33 @@
 
   <!-- HERO -->
   <main>
-    <section id="home" class="hero" aria-label="Hero section">
-      <div class="hero-inner" role="region" aria-labelledby="hero-title">
-        <h1 id="hero-title" class="hero-title">Cobysteff Analytics</h1>
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">Cobysteff Analytics</h1>
         <p class="hero-sub">Turning Data Into Decisions</p>
         <a class="cta" href="#contact">Get in touch</a>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section" aria-label="About us">
+    <section id="about" class="section">
       <h2>About Us</h2>
       <div class="about-grid">
         <div class="about-text">
           <p><strong>Cobysteff Analytics</strong> helps Kenyan businesses turn data into clear stories and better choices. We combine analytics, dashboards and clean visuals so decision-makers can act fast and with confidence.</p>
           <p>We cover market trends, sales insights, customer behaviour and tailored visual reports — plus creative design services to present your data beautifully.</p>
         </div>
-
         <div class="about-images">
-          <!-- Replace these filenames if yours are different; must be in same folder -->
-          <img src="cg.jpeg" alt="Kenyan business insight graphic">
-          <img src="vector.jpeg" alt="Market trends visual">
-          <img src="stok.jpeg" alt="Stock growth graphic">
-          <img src="agric.png" alt="Analytics dashboard example">
+          <img src="cg.jpeg" alt="Kenyan business insight graphic" class="big">
+          <img src="vector.jpeg" alt="Market trends visual" class="small1">
+          <img src="stok.jpeg" alt="Stock growth graphic" class="small2">
         </div>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="section dark" aria-label="Services">
-      <h2 style="color:#fff;">Our Services</h2>
+    <section id="services" class="section dark">
+      <h2>Our Services</h2>
       <div class="services-grid">
         <div class="card">
           <h3>Data Analytics</h3>
@@ -237,7 +201,7 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section id="portfolio" class="section" aria-label="Portfolio">
+    <section id="portfolio" class="section">
       <h2>Portfolio</h2>
       <div class="portfolio-grid">
         <img src="agric.png" alt="Portfolio example image">
@@ -249,20 +213,18 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section contact" aria-label="Contact">
+    <section id="contact" class="section contact">
       <h2>Contact</h2>
       <p><strong>Phone:</strong> +254701490155</p>
       <p><strong>Email:</strong> cobysteffanalytics@gmail.com</p>
     </section>
-
   </main>
 
-  <footer aria-label="Footer">
+  <footer>
     <p>&copy; <span id="year"></span> Cobysteff Analytics</p>
   </footer>
 
   <script>
-    // small script to set current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
