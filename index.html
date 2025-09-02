@@ -18,24 +18,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 12px;
+      padding: 0 20px;
       background: rgba(0,0,0,0.45);
       backdrop-filter: blur(3px);
       z-index: 1000;
     }
-    .logo { color: #fff; font-weight:700; font-size: 1.05rem; }
+    .logo { color: #fff; font-weight:700; font-size: 1.1rem; }
     .nav-wrap {
       display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      white-space: nowrap;
+      gap: 16px;
     }
     .nav-link {
       color: #fff; text-decoration: none;
-      padding: 10px 14px; border-radius: 6px;
+      padding: 10px 14px;
       font-weight:600;
     }
-    .nav-link:hover { background: rgba(255,255,255,0.06); color:#ffb347; }
+    .nav-link:hover { color:#ffb347; }
 
     /* HERO */
     header.hero {
@@ -75,31 +73,27 @@
     .cta:hover { background:#e07a00; }
 
     /* SECTIONS */
-    .section { width: 100%; padding: 60px 0; }
+    .section { width: 100%; padding: 60px 20px; }
     .section h2 { text-align: center; margin-bottom: 28px; font-size: 1.8rem; }
 
     /* ABOUT US */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      padding: 0 20px;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+      align-items: center;
     }
     .about-text {
-      padding: 20px;
-      background: #f9f9f9;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.6;
     }
     .about-images {
       display: grid;
-      grid-template-areas: 
-        "big small1"
-        "big small2";
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
     }
     .about-images div {
       position: relative;
@@ -108,15 +102,15 @@
     }
     .about-images img {
       width: 100%; height: 100%;
-      object-fit: cover; display:block;
-      transition: transform 0.4s ease;
+      object-fit: cover;
+      display:block;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .about-images img:hover {
-      transform: scale(1.08);
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
-    .about-images .big { grid-area: big; }
-    .about-images .small1 { grid-area: small1; }
-    .about-images .small2 { grid-area: small2; }
 
     /* SERVICES */
     .services-grid {
@@ -140,19 +134,18 @@
       grid-template-columns:1fr 1fr;
       align-items:center;
       gap: 20px;
-      padding: 0 20px;
+      max-width: 1000px;
+      margin:auto;
     }
     .portfolio-grid img {
-      width:100%; height:100%;
-      max-height: 400px;
-      object-fit: cover;
+      width:100%; height:auto;
       border-radius: 8px;
-      transition: transform 0.4s ease;
+      transition: transform 0.3s ease;
     }
     .portfolio-grid img:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
-    .portfolio-text { padding: 40px; background:#f9f9f9; border-radius: 8px; }
+    .portfolio-text { padding: 30px; background:#f9f9f9; border-radius: 8px; }
 
     /* CONTACT */
     .contact { padding: 40px 20px; text-align:center; background:#003366; color:#fff; }
@@ -160,8 +153,8 @@
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .about-images { grid-template-areas: "big" "small1" "small2"; grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; text-align: center; }
+      .about-text { text-align: center; }
       .portfolio-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -198,9 +191,10 @@
           <p>We cover market trends, sales insights, customer behaviour and tailored visual reports — plus creative design services to present your data beautifully.</p>
         </div>
         <div class="about-images">
-          <div><img src="cg.jpeg" alt="Kenyan business insight graphic" class="big"></div>
-          <div><img src="vector.jpeg" alt="Market trends visual" class="small1"></div>
-          <div><img src="stok.jpeg" alt="Stock growth graphic" class="small2"></div>
+          <div><img src="cg.jpeg" alt="Kenyan business insight graphic"></div>
+          <div><img src="vector.jpeg" alt="Market trends visual"></div>
+          <div><img src="stok.jpeg" alt="Stock growth graphic"></div>
+          <div><img src="agric.png" alt="Agriculture data visualization"></div>
         </div>
       </div>
     </section>
